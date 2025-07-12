@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAWAFED TRADING & ALTERNATIVE ENERGY</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/2F3FA4/FFFFFF?text=R">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Style for Arabic text */
+        .lang-ar {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* Hide elements by default */
+        [data-lang="ar"],
+        [data-lang="en"] {
+            display: none;
+        }
+
+        /* Preloader styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .spinner {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 9px solid;
+            border-color: #dbdcef;
+            border-right-color: #2f3fa4;
+            animation: spinner-d3wgkg 1s infinite linear;
+        }
+
+        @keyframes spinner-d3wgkg {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        /* Scrollbar styles for product gallery */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Modal styles */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+
+        .modal-active {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            transition: transform 0.25s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header & Navbar -->
+    <header id="navbar" class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://placehold.co/80x80/2F3FA4/FFFFFF?text=Rawafed" alt="Rawafed Logo" class="h-12 w-12">
+                <div class="font-bold text-lg md:text-xl text-blue-900">
+                    <span data-lang="en">RAWAFED</span>
+                    <span data-lang="ar" class="lang-ar">روافد</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-gray-700 font-medium">
+                <a href="#home" class="hover:text-orange-500 transition-colors" data-lang="en">Home</a>
+                <a href="#about" class="hover:text-orange-500 transition-colors" data-lang="en">About</a>
+                <a href="#projects" class="hover:text-orange-500 transition-colors" data-lang="en">Projects</a>
+                <a href="#products" class="hover:text-orange-500 transition-colors" data-lang="en">Products</a>
+                <a href="#contact" class="hover:text-orange-500 transition-colors" data-lang="en">Contact</a>
+
+                <a href="#home" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">الرئيسية</a>
+                <a href="#about" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">عن الشركة</a>
+                <a href="#projects" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">مشاريعنا</a>
+                <a href="#products" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">منتجاتنا</a>
+                <a href="#contact" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">تواصل معنا</a>
+            </div>
+            <div class="flex items-center">
+                <button id="lang-switcher"
+                    class="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-orange-500 transition-colors font-semibold">
+                    <span class="lang-ar">English</span>
+                    <span>العربية</span>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden ml-4 text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">About</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Projects</a>
+            <a href="#products" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Products</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Contact</a>
+
+            <a href="#home" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar" data-lang="ar">الرئيسية</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar" data-lang="ar">عن الشركة</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar"
+                data-lang="ar">مشاريعنا</a>
+            <a href="#products" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar"
+                data-lang="ar">منتجاتنا</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar" data-lang="ar">تواصل
+                معنا</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-[60vh] bg-cover bg-center"
+            style="background-image: url('https://placehold.co/1920x1080/cccccc/333333?text=Solar+Panel+Array');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div
+                class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="en">RAWAFED TRADING & ALTERNATIVE
+                    ENERGY</h1>
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight lang-ar" data-lang="ar">روافد للتجارة والطاقة
+                    البديلة</h1>
+                <p class="mt-4 text-lg md:text-2xl" data-lang="en">Together For Sustainable Power</p>
+                <p class="mt-4 text-lg md:text-2xl lang-ar" data-lang="ar">معاً من أجل طاقة مستدامة</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">About Our Company</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 lang-ar" data-lang="ar">عن شركتنا</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/2F3FA4/FFFFFF?text=Rawafed+Project" alt="About Rawafed"
+                            class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-600 leading-relaxed" data-lang="en"></p>
+                        <p class="text-gray-600 leading-relaxed text-right lang-ar" data-lang="ar"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Our Projects</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 lang-ar" data-lang="ar">مشاريعنا</h2>
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project cards will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4" data-lang="en">Our Products</h2>
+                <h2 class="text-3xl font-bold text-center mb-4 lang-ar" data-lang="ar">منتجاتنا</h2>
+                <p class="text-center text-gray-600 mb-12" data-lang="en">Exclusive agents for Motoma products in
+                    Sweida.</p>
+                <p class="text-center text-gray-600 mb-12 lang-ar" data-lang="ar">وكلاء شركة موتوما الحصريون في
+                    السويداء.</p>
+
+                <!-- Product Tabs -->
+                <div class="mb-8 flex justify-center border-b border-gray-200">
+                    <button data-tab="panels"
+                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-blue-800 border-b-2 border-blue-800"
+                        data-lang="en">Panels</button>
+                    <button data-tab="inverters"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800"
+                        data-lang="en">Inverters</button>
+                    <button data-tab="batteries"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800"
+                        data-lang="en">Batteries</button>
+
+                    <button data-tab="panels"
+                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-blue-800 border-b-2 border-blue-800 lang-ar"
+                        data-lang="ar">الألواح</button>
+                    <button data-tab="inverters"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800 lang-ar"
+                        data-lang="ar">الإنفيرترات</button>
+                    <button data-tab="batteries"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800 lang-ar"
+                        data-lang="ar">البطاريات</button>
+                </div>
+
+                <!-- Product Content -->
+                <div id="panels-content" class="product-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                </div>
+                <div id="inverters-content"
+                    class="product-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                <div id="batteries-content"
+                    class="product-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Contact Us</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 lang-ar" data-lang="ar">تواصل معنا</h2>
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-map-marker-alt text-orange-400 text-xl w-6 text-center"></i>
+                                <span data-lang="en">Syria - Sweida - Al Raha</span>
+                                <span class="lang-ar" data-lang="ar">سوريا - السويداء - الرحا</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-envelope text-orange-400 text-xl w-6 text-center"></i>
+                                <a href="mailto:info@rawafed-sweida.com"
+                                    class="hover:text-orange-400">info@rawafed-sweida.com</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-phone text-orange-400 text-xl w-6 text-center"></i>
+                                <a href="tel:00963982470204" class="hover:text-orange-400">00963-982470204</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-tty text-orange-400 text-xl w-6 text-center"></i>
+                                <span class="hover:text-orange-400">016-395544</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex space-x-6">
+                            <a href="https://youtube.com/@rawafed-energy" target="_blank"
+                                class="text-2xl hover:text-orange-400 transition-colors"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/Marwanaburas59?mibextid=ZbWKwL" target="_blank"
+                                class="text-2xl hover:text-orange-400 transition-colors"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=963944911892" target="_blank"
+                                class="text-2xl hover:text-orange-400 transition-colors"><i
+                                    class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.892742137681!2d36.65083331518874!3d32.90158338089858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDU0JzA1LjciTiAzNsKwMzgnNTQuMCJF!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-lg"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p data-lang="en">Administrative Manager: Marwan Fadel Abu Ras</p>
+            <p class="lang-ar" data-lang="ar">المدير الإداري: مروان فضل أبو راس</p>
+            <p class="mt-2 text-sm">&copy; <span id="year"></span> RAWAFED. All Rights Reserved.</p>
+            <p class="mt-1 text-xs" data-lang="en">Designed by Eng. Qusai Hamael</p>
+            <p class="mt-1 text-xs lang-ar" data-lang="ar">تصميم: م. قصي حمائل</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="to-top-button" title="Go To Top"
+        class="hidden fixed bottom-8 right-8 z-50 p-3 rounded-full bg-blue-800 text-white shadow-lg hover:bg-orange-500 focus:outline-none transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Modal -->
+    <div id="project-modal"
+        class="modal fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
+        <div
+            class="modal-content bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-full overflow-y-auto transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                <button id="modal-close" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            </div>
+            <div class="p-6">
+                <div id="modal-video-container" class="mb-4 hidden"></div>
+                <div id="modal-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Gallery images will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // --- DATA STORE ---
+        const textContent = {
+            en: {
+                about: `(Rawafed Company for Trade and Alternative Energy) was established on 7/14/2019 by Resolution No. 2058 in the town of Al-Raha, near the city of As-Sweida, southern Syria, according to law No.32 to invest in renewable energies, which allowed supplying the Syrian electricity network and enabling it to support and continue the work of industrial, agricultural and residential facilities by establishing the necessary photovoltaic stations. Rawafed has obtained the exclusive agency for Motoma's products in sweida, which include high-efficiency panels, inverters and variety batteries.`,
+            },
+            ar: {
+                about: `تأسست (شركة روافد للتجارة والطاقة البديلة م.م.خ) في 14/7/2019 بالقرار رقم 2058 في بلدة الرحا جوار مدينة السويداء جنوب سورية وفق القانون رقم 32 للإستثمار في الطاقات المتجددة الذي سمح برفد الشبكة السورية للكهرباء وتمكينها دعم وإستمرار عمل المنشآت الصناعية والزراعية والسكنية بإقامة المحطات الكهروضوئية اللازمة. وقد حظيت شركة روافد بالوكالة الحصرية لمنتجات شركة (MOTOMA) موتوما العالمية في السويداء والتي تشمل الألواح عالية الكفاءة والإنفيرترات والبطاريات المتنوعة. <br><br><b>نحن: نَــدرُسْ.. نُــرَخِّصْ.. نُنَفِّذْ</b>`,
+            }
+        };
+
+        const projectsData = [
+            {
+                id: 'al-ayham',
+                name: { en: 'AL AYHAM STATION', ar: 'محطة الأيهم' },
+                img: 'https://placehold.co/400x300/2F3FA4/FFFFFF?text=Al+Ayham',
+                details: {
+                    en: '100kw.h photovoltaic station owned by Yahya Al-Andari in Sweida - Baka Triangle.',
+                    ar: 'محطة كهروضوئية 100kw.h. يملكها يحيى العنداري وأولاده في السويداء-مثلث بكا.'
+                },
+                video: 'https://www.youtube.com/embed/W51fLY2Fpr4?rel=0',
+                gallery: Array.from({ length: 46 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Al+Ayham+${i + 1}`)
+            },
+            {
+                id: 'khalkhala',
+                name: { en: 'KHALKHALA STATION', ar: 'محطة خلخلة' },
+                img: 'https://placehold.co/400x300/F87A05/FFFFFF?text=Khalkhala',
+                details: {
+                    en: '100kw.h photovoltaic station owned by Basil Hilal in Sweida - Khalkhala.',
+                    ar: 'محطة كهروضوئية 100kw.h. يملكها باسل هلال في السويداء - خلخلة.'
+                },
+                gallery: Array.from({ length: 12 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Khalkhala+${i + 1}`)
+            },
+            {
+                id: 'rawafed-al-oula',
+                name: { en: 'RAWAFED AL OULA STATION', ar: 'محطة روافد الأولى' },
+                img: 'https://placehold.co/400x300/28A745/FFFFFF?text=Rawafed+Al+Oula',
+                details: {
+                    en: 'One of our flagship projects demonstrating our commitment to sustainable energy.',
+                    ar: 'أحد مشاريعنا الرائدة التي تظهر التزامنا بالطاقة المستدامة.'
+                },
+                gallery: Array.from({ length: 8 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Rawafed+Al+Oula+${i + 1}`)
+            },
+            {
+                id: 'off-grid',
+                name: { en: 'OFF GRID SYSTEMS', ar: 'أنظمة خارج الشبكة' },
+                img: 'https://placehold.co/400x300/17A2B8/FFFFFF?text=Off-Grid',
+                details: {
+                    en: 'Customized off-grid solutions for residential and commercial needs.',
+                    ar: 'حلول مخصصة خارج الشبكة للاحتياجات السكنية والتجارية.'
+                },
+                gallery: Array.from({ length: 6 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Off-Grid+${i + 1}`)
+            }
+        ];
+
+        const productsData = {
+            panels: [
+                { name: 'SO-SPN-MC182-525-545', img: 'https://placehold.co/300x300/cccccc/333333?text=Panel+545W', pdf: 'pdfs/SO-SPN-MC182-525-545.pdf' },
+                { name: 'DSE-SO-SPN-MC156-405', img: 'https://placehold.co/300x300/cccccc/333333?text=Panel+405W', pdf: 'pdfs/DSE-SO-SPN-MC156-405.pdf' },
+            ],
+            inverters: [
+                { name: 'VM 1.5KVA', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+1.5KVA', pdf: 'pdfs/MOTOMA-Axpert VM 1.5KVA.pdf' },
+                { name: 'VM 3KVA value', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+3KVA', pdf: 'pdfs/VM 3KVA value.pdf' },
+                { name: 'VM III TWIN 4 & 6 KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+VMIII', pdf: 'pdfs/VM III TWIN 4-6KW.pdf' },
+                { name: 'VM IV TWIN 4 & 6 KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+VMIV', pdf: 'pdfs/VM IV TWIN 4-6 KW.pdf' },
+                { name: 'MAX TWIN 8KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+MAX+8KW', pdf: 'pdfs/MAX TWIN 8KW.pdf' },
+                { name: 'MAX II TWIN 8KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+MAXII+8KW', pdf: 'pdfs/MAX II TWIN 8KW.pdf' },
+                { name: 'MAX II TWIN 11KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+MAXII+11KW', pdf: 'pdfs/MAX II TWIN 11KW.pdf' },
+            ],
+            batteries: [
+                { name: 'M62PW - M68PW', img: 'https://placehold.co/300x300/cccccc/333333?text=Battery+M68PW', pdf: 'pdfs/M62PW -M68PW.pdf' },
+                { name: 'M82PW - M88PW', img: 'https://placehold.co/300x300/cccccc/333333?text=Battery+M88PW', pdf: 'pdfs/M82PW -M88PW.pdf' },
+                { name: 'GEL BATTERIES', img: 'https://placehold.co/300x300/cccccc/333333?text=GEL+Battery', pdf: 'pdfs/Motoma Gel Battery.pdf' },
+            ]
+        };
+
+        // --- SCRIPT LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- GENERAL SETUP ---
+            const preloader = document.getElementById('preloader');
+            window.addEventListener('load', () => {
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            });
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // --- LANGUAGE SWITCHER ---
+            const langSwitcher = document.getElementById('lang-switcher');
+            const htmlEl = document.documentElement;
+            let currentLang = 'en';
+
+            const updateLanguage = (lang) => {
+                currentLang = lang;
+                htmlEl.lang = lang;
+                htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+                // Toggle visibility of language-specific elements
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    if (el.dataset.lang === lang) {
+                        el.style.display = 'block';
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
+
+                // Update button text
+                const buttonTextEn = langSwitcher.querySelector('span:not(.lang-ar)');
+                const buttonTextAr = langSwitcher.querySelector('span.lang-ar');
+                if (lang === 'ar') {
+                    buttonTextEn.style.display = 'block';
+                    buttonTextAr.style.display = 'none';
+                } else {
+                    buttonTextEn.style.display = 'none';
+                    buttonTextAr.style.display = 'block';
+                }
+
+                // Update text content from JS object
+                document.querySelector('[data-lang="en"][class*="about"]').innerHTML = textContent.en.about;
+                document.querySelector('[data-lang="ar"][class*="about"]').innerHTML = textContent.ar.about;
+
+                // Re-render dynamic content
+                renderProjects();
+                renderProducts();
+            };
+
+            langSwitcher.addEventListener('click', () => {
+                const newLang = currentLang === 'en' ? 'ar' : 'en';
+                updateLanguage(newLang);
+            });
+
+            // --- MOBILE MENU ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Close mobile menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // --- PROJECTS ---
+            const projectsGrid = document.getElementById('projects-grid');
+            const renderProjects = () => {
+                projectsGrid.innerHTML = '';
+                projectsData.forEach(project => {
+                    const projectCard = `
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer project-card" data-project-id="${project.id}">
+                            <img src="${project.img}" alt="${project.name[currentLang]}" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">${project.name[currentLang]}</h3>
+                                <p class="text-gray-600 text-sm">${project.details[currentLang]}</p>
+                            </div>
+                        </div>
+                    `;
+                    projectsGrid.innerHTML += projectCard;
+                });
+                addProjectCardListeners();
+            };
+
+            // --- PROJECT MODAL ---
+            const modal = document.getElementById('project-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalGallery = document.getElementById('modal-gallery');
+            const modalVideoContainer = document.getElementById('modal-video-container');
+            const modalClose = document.getElementById('modal-close');
+
+            const openModal = (projectId) => {
+                const project = projectsData.find(p => p.id === projectId);
+                if (!project) return;
+
+                modalTitle.textContent = project.name[currentLang];
+
+                // Video
+                if (project.video) {
+                    modalVideoContainer.innerHTML = `<iframe class="w-full aspect-video rounded-md" src="${project.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    modalVideoContainer.classList.remove('hidden');
+                } else {
+                    modalVideoContainer.classList.add('hidden');
+                }
+
+                // Gallery
+                modalGallery.innerHTML = '';
+                project.gallery.forEach(imgSrc => {
+                    modalGallery.innerHTML += `<a href="${imgSrc}" target="_blank"><img src="${imgSrc}" class="w-full h-full object-cover rounded-md shadow-md hover:opacity-80 transition-opacity"></a>`;
+                });
+
+                modal.classList.remove('hidden');
+                document.body.classList.add('modal-active');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('.modal-content').classList.remove('scale-95');
+                }, 10);
+            };
+
+            const closeModal = () => {
+                modal.classList.add('opacity-0');
+                modal.querySelector('.modal-content').classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    document.body.classList.remove('modal-active');
+                }, 250);
+            };
+
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            function addProjectCardListeners() {
+                document.querySelectorAll('.project-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        openModal(card.dataset.projectId);
+                    });
+                });
+            }
+
+            // --- PRODUCTS ---
+            const productTabs = document.querySelectorAll('.product-tab');
+            const productContents = document.querySelectorAll('.product-content');
+
+            const createProductCard = (product) => `
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <img src="${product.img}" alt="${product.name}" class="w-full h-48 object-contain mb-4">
+                    <h4 class="font-semibold h-12">${product.name}</h4>
+                    <a href="${product.pdf}" target="_blank" class="mt-4 inline-block bg-blue-800 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-orange-500 transition-colors">
+                        <span data-lang="en">Data Sheet</span>
+                        <span data-lang="ar" class="lang-ar">ورقة البيانات</span>
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            `;
+
+            const renderProducts = () => {
+                Object.keys(productsData).forEach(category => {
+                    const container = document.getElementById(`${category}-content`);
+                    container.innerHTML = '';
+                    productsData[category].forEach(product => {
+                        container.innerHTML += createProductCard(product);
+                    });
+                });
+                // Re-apply language visibility after re-rendering
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    el.style.display = el.dataset.lang === currentLang ? 'block' : 'none';
+                });
+            };
+
+            productTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    productTabs.forEach(t => t.classList.remove('tab-active', 'text-blue-800', 'border-blue-800'));
+                    document.querySelectorAll(`.product-tab[data-tab="${tab.dataset.tab}"]`).forEach(t => t.classList.add('tab-active', 'text-blue-800', 'border-blue-800'));
+
+                    productContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(`${tab.dataset.tab}-content`).classList.remove('hidden');
+                });
+            });
+
+            // --- BACK TO TOP BUTTON ---
+            const toTopButton = document.getElementById('to-top-button');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    toTopButton.classList.remove('hidden');
+                } else {
+                    toTopButton.classList.add('hidden');
+                }
+            });
+            toTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // --- INITIALIZE ---
+            updateLanguage('en'); // Set default language to English
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVERTER</title>
+    <link rel="icon" type="image/x-icon" href="images/rawafed.ico">
+    <link rel="stylesheet" href="BT4/bootstrap.min.css">
+    <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      line-height: 34px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    /* start preloader */
+
+.loader{
+  background: rgba(17, 17, 17, 0.817);
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+.loader span:nth-child(1){
+  border-radius: 38% 62% 64% 36% / 43% 35% 65% 57%;
+}
+.loader span:nth-child(2){
+  animation-direction: reverse;
+  border-radius: 41% 59% 40% 60% / 65% 66% 34% 35%;
+}
+.loader span:nth-child(3){
+  animation-duration: 3s;
+  border-radius: 73% 27% 56% 44% / 57% 74% 26% 43%;
+}
+@keyframes animate{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+.loader span{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #f87a05;
+  pointer-events: none;
+  animation: animate 5s linear infinite;
+}
+#c1{
+    border: 2px solid #2f3fa4;
+}
+.loader h2{
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size:small;
+}
+/* end preloader */
+  .container .gallery a img {
+    float: left;
+    width: 25%;
+    height: auto;
+    border: 2px solid #fff;
+    -webkit-transition: -webkit-transform .15s ease;
+    -moz-transition: -moz-transform .15s ease;
+    -o-transition: -o-transform .15s ease;
+    -ms-transition: -ms-transform .15s ease;
+    transition: transform .15s ease;
+    position: relative;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  a {
+    color: #009688;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #01695f;
+    text-decoration: none;
+  }
+  /* NAVBAR*/
+  .container-fluid{
+    text-align: center;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #2f3fa4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .topnav a {
+    float:left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 35px;
+    transition: .4s;
+    width: 100%;
+  }
+
+    .topnav .icon {
+    display: none;
+  }
+
+    .topnav a:hover,.dropbtn {
+    background-color: #f87a05;
+    color: white;
+  } 
+  /* END NAVBAR*/
+  .services-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+  }
+  .container{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .container-fluid{
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  .card-img-top:hover {
+  opacity: 0.95;
+  filter: alpha(opacity=95); /* For IE8 and earlier */
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+}
+      /* footer */
+  .text-light {
+    width: 100%;
+    height: 93PX;
+    background-color: #2f3fa4;
+    color: white;
+    text-align: center;
+    bottom: 100%;
+    
+    }
+  .text{
+    padding: 14PX;
+  }
+
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+  }
+  .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    
+  }
+  .socials li{
+    margin: 0 15px;
+  }
+
+  .footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  /* END FOOTER*/
+</style>   
+</head>
+<body>
+        <!-- start preloader -->
+        <div class="loader" id="preloader">
+          <span></span>
+          <span id="c1"></span>
+          <span></span>
+          <h2>loading...</h2>
+        </div>
+        <!-- end preloader -->
+     <!-- NAVBAR -->
+     <div class="container-fluid">
+      <img src="images/NEW LOGO RAWAFED.webp" width="100" alt="rawafed">
+                <p>TOGETHER FOR SUSTAINABLE POWER</p>
+    </div>
+    <div class="topnav">    
+        <a class="nav-link" href="index.html">HOME</a>
+    </div>
+    <div class="services-container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="container"> 
+            <img class="card-img-top" src="pdfs/VM 3KVA value.webp" alt="VM 1.5KVA value-inverter" style="width:300px">
+            <h5 style="text-align: center;">VM 1.5KVA</h5>
+            <a href="pdfs/MOTOMA-Axpert VM 1.5KVA.pdf" class="btn btn-primary" role="button">Download User Manual </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="container"> 
+            <img class="card-img-top" src="pdfs/VM 3KVA value.webp" alt="VM 3KVA value-inverter" style="width:300px">
+            <h5 style="text-align: center;">VM 3KVA value</h5>
+            <a href="pdfs/VM 3KVA value.pdf" class="btn btn-primary" role="button">Download User Manual </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="container"> 
+            <img class="card-img-top" src="pdfs/VM III TWIN 4KW.webp" alt="VM III TWIN 4_&_6 KW" style="width:300px">
+            <h5 style="text-align: center;">VM III TWIN 4_&_6 KW</h5>
+            <a href="pdfs/VM III TWIN 4-6KW.pdf" class="btn btn-primary" role="button">Download User Manual </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="container"> 
+            <img class="card-img-top" src="pdfs/VM IV TWIN 4KW.webp" alt="VM IV TWIN 4_&_6 KW" style="width:300px">
+            <h5 style="text-align: center;">VM IV TWIN 4_&_6 KW</h5>
+            <a href="pdfs/VM IV TWIN 4-6 KW.pdf" class="btn btn-primary" role="button">Download User Manual </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="container"> 
+            <img class="card-img-top" src="pdfs/MAX TWIN 8KW.webp" alt="MAX TWIN 8KW" style="width:300px">
+            <h5 style="text-align: center;">MAX TWIN 8KW</h5>
+            <a href="pdfs/MAX TWIN 8KW.pdf" class="btn btn-primary" role="button">Download User Manual </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="container"> 
+            <img class="card-img-top" src="pdfs/MAX II TWIN 8KW.webp" alt="MAX II TWIN 8KW" style="width:300px">
+            <h5 style="text-align: center;">MAX II TWIN 8KW</h5>
+            <a href="pdfs/MAX II TWIN 8KW.pdf" class="btn btn-primary" role="button">Download User Manual </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="container"> 
+            <img class="card-img-top" src="pdfs/MAX II TWIN 8KW.webp" alt="MAX II TWIN 11KW" style="width:300px">
+            <h5 style="text-align: center;">MAX II TWIN 11KW</h5>
+            <a href="pdfs/MAX II TWIN 11KW.pdf" class="btn btn-primary" role="button">Download User Manual </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- start preloader -->
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+        loader.style.display = "none";
+      })
+
+    </script>
+    <!-- end preloader -->
+</body>
+<footer>
+    <div class="text-light">
+        <p>السويداء- الرحا- بجانب بلدية الرحا</p>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/Marwanaburas59?mibextid=ZbWKwL"><img src="images/icons8-facebook-48.webp" width="34" alt="RAWAFED_QR_Facebook"></a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=963944911892"><img src="images/icons8-whatsapp-48 (1).webp" width="34" alt="RAWAFED_whatsapp"></a></li>
+          <li><a href="mailto:info@rawafed-sweida.com"><img src="images/icons8-gmail-logo-48.webp" width="30" alt="RAWAFED_gmail"></a></li>
+          <li><a href="tel:00963982012213"><img src="images/icons8-phone-48.webp" width="28" alt="RAWAFED_phone"></a></li>
+        </ul>
+    </div>
+</footer>
+</html>

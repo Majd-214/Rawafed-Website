@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MOTOMA POWER CO.,LTD</title>
+<meta name="generator" content="PHPMyWind CMS" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/heaferfooter.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/object-fit.min.js"></script>
+    <script type="text/javascript" src="js/touchslide.1.1.js"></script>
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="casesa">
+    <header>
+        <nav>
+            <div class="container clearfix position-relative h-100">
+                <div class="position-absolute logo_img"><a href="/"><img src="uploads/image/20220926/1664190461.png"></a></div>
+                <div class="menu-toggler position-absolute">
+                    <span class="top animate-4"></span>
+                    <span class="middle animate-4"></span>
+                    <span class="bottom animate-4"></span>
+                </div>
+                <ul class="pull-left language">
+                    <li><a href="/"><img src="images/en.png" alt=""> <span>English</span></a></li>
+                    <!-- <li><a href="/cn/"><img src="images/cn.png" alt=""> <span>简体中文</span></a></li> -->
+                </ul>
+                <ul class="h-menu float-right clearfix">
+                    <li class="float-left active"><a href="/">Home</a></li>
+                    <li class="float-left position-relative ">
+                        <a href="aboutus.html">About Us</a>
+                        <ul class="sm-menu">
+                                                        <li><a href="aboutus-58-1.html">Company Profile</a></li>
+                                                        <li><a href="aboutus-30-1.html">Company Culture</a></li>
+                                                        <li><a href="aboutus-31-1.html">Development Path</a></li>
+                                                        <li><a href="aboutus-32-1.html">Qualification Honor</a></li>
+                                                    </ul>
+                    </li>
+                    <li class="float-left position-relative ">
+                        <a href="products.html">Products</a>
+                        <ul class="sm-menu">
+                                                        <li><a href="products-33-1.html">Battery</a></li>
+                                                        <li><a href="products-34-1.html">Inverter</a></li>
+                                                        <li><a href="products-35-1.html"> Solar panel </a></li>
+                                                        <li><a href="products-36-1.html">Accessory</a></li>
+                                                    </ul>
+                    </li>
+                    <li class="float-left "><a href="solutions.html">Solutions</a></li>
+                    <li class="float-left position-relative ">
+                        <a href="news.html">News</a>
+                        <ul class="sm-menu">
+                                                        <li><a href="news-37-1.html">Company News</a></li>
+                                                        <li><a href="news-38-1.html">Industry News</a></li>
+                                                        <li><a href="news-39-1.html">Media Dynamics</a></li>
+                                                    </ul>
+                    </li>
+                    <li class="float-left position-relative ">
+                        <a href="service.html">Service</a>
+                        <ul class="sm-menu">
+                                                        <li><a href="service-40-1.html">Support</a></li>
+                                                        <li><a href="service-41-1.html">Warranty Registration</a></li>
+                                                        <li><a href="service-42-1.html">Download</a></li>
+                                                    </ul>
+                    </li>
+                    <li class="float-left "><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+<div id="slideBox" class="slideBox slideBox_top">
+    <div class="bd">
+        <ul>
+                                            <li><a href="javascript:;"><img src="uploads/image/20221118/1668771345.jpg"/></a></li>
+                                <li><a href="javascript:;"><img src="uploads/image/20221109/1667984858.jpg"/></a></li>
+                                    </ul>
+    </div>
+    <div class="hd"><ul></ul></div>
+    <!-- <a class="prev" href="javascript:void(0)"><span class="iconfont icon-toleft"></span></a> -->
+    <!-- <a class="next" href="javascript:void(0)"><span class="iconfont icon-toright"></span></a> -->
+</div>
+
+<div class="paddingtb100px overflow-hidden aboutus_bjimg">
+    <div class="container">
+        <div class="text-center position-relative aboutus_title wow fadeInUp"><h5><span>ABOUT US</span></h5></div>
+        <div class="margin-top10px text-center aboutus_text wow fadeInUp">Quality creates brand, Service enhances value.</div>
+        <div class="margin-top80px">
+            <div class="position-relative Scroll-left wow fadeInUp">
+                <div class="left-hd"><a class="next"></a><a class="prev"></a></div>
+                <div class="left-bd overflow-hidden">
+                    <div class="tempWrap">
+                        <ul class="picList">
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="paddingtb40px experience_bjimg">
+    <div class="container">
+        <ul class="text-center advantage_ul index-three clearfix">
+            <li>
+                <i class="timer">20000</i><span>+</span>
+                <div class="heart-text">square meters production base</div>
+            </li>
+            <li>
+                <i class="timer">130</i><span>+</span>
+                <div class="heart-text">National and regional areas</div>
+            </li>
+            <li>
+                <i class="timer">500000000</i>
+                <div class="heart-text">million annual export volume</div>
+            </li>
+            <li>
+                <i class="timer">30</i><span>+</span>
+                <div class="heart-text">30+ patents and intellectual prope</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="paddingtb100px overflow-hidden products_bjimg">
+    <div class="container">
+        <div class="text-center position-relative aboutus_title wow fadeInUp"><h5><span>PRODUCTS</span></h5></div>
+        <div class="margin-top10px text-center aboutus_text wow fadeInUp">Quality creates brand, Service enhances value.</div>
+        <div class="margin-top80px">
+            <div class="row paddinglr5px">
+                                <div class="col-sm-3 col-xs-6 paddinglr10px position-relative index_products wow fadeInUp">
+                    <a href="products-33-1.html">
+                        <img class="w-100" src="uploads/image/20220924/1664021173.jpg" alt="Battery">
+                        <div class="position-absolute text-center index_products_centent">
+                            <h4 class="font-size24px font-bold color3">01</h4>
+                            <h5 class="space1 font-size14px line-height2 color3">Battery</h5>
+                        </div>
+                    </a>
+                </div>
+                                <div class="col-sm-3 col-xs-6 paddinglr10px position-relative index_products wow fadeInUp">
+                    <a href="products-34-1.html">
+                        <img class="w-100" src="uploads/image/20220924/1664021431.jpg" alt="Inverter">
+                        <div class="position-absolute text-center index_products_centent">
+                            <h4 class="font-size24px font-bold color3">02</h4>
+                            <h5 class="space1 font-size14px line-height2 color3">Inverter</h5>
+                        </div>
+                    </a>
+                </div>
+                                <div class="col-sm-3 col-xs-6 paddinglr10px position-relative index_products wow fadeInUp">
+                    <a href="products-35-1.html">
+                        <img class="w-100" src="uploads/image/20220927/1664283069.jpg" alt=" Solar panel ">
+                        <div class="position-absolute text-center index_products_centent">
+                            <h4 class="font-size24px font-bold color3">03</h4>
+                            <h5 class="space1 font-size14px line-height2 color3"> Solar panel </h5>
+                        </div>
+                    </a>
+                </div>
+                                <div class="col-sm-3 col-xs-6 paddinglr10px position-relative index_products wow fadeInUp">
+                    <a href="products-36-1.html">
+                        <img class="w-100" src="uploads/image/20220928/1664334088.jpg" alt="Accessory">
+                        <div class="position-absolute text-center index_products_centent">
+                            <h4 class="font-size24px font-bold color3">04</h4>
+                            <h5 class="space1 font-size14px line-height2 color3">Accessory</h5>
+                        </div>
+                    </a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<div class="paddingtb40px overflow-hidden advantage_bjimg">
+    <div class="container">
+        <ul class="text-center advantage_ul clearfix">
+                        <li class="wow fadeInUp">
+                <h4 class="font-size24px font-bold">automotive -grade battery cells</h4>
+                <h5 class="margin-top10px font-size14px"></h5>
+            </li>
+                        <li class="wow fadeInUp">
+                <h4 class="font-size24px font-bold">BMS can be customized </h4>
+                <h5 class="margin-top10px font-size14px"></h5>
+            </li>
+                        <li class="wow fadeInUp">
+                <h4 class="font-size24px font-bold">Fully automatic production process</h4>
+                <h5 class="margin-top10px font-size14px"></h5>
+            </li>
+                        <li class="wow fadeInUp">
+                <h4 class="font-size24px font-bold">high stability in different environment</h4>
+                <h5 class="margin-top10px font-size14px"></h5>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+<div class="paddingtb100px overflow-hidden bg-1">
+    <div class="container">
+        <div class="text-center position-relative aboutus_title wow fadeInUp"><h5><span>SOLUTIONS</span></h5></div>
+        <div class="margin-top10px text-center aboutus_text wow fadeInUp">Quality creates brand, Service enhances value.</div>
+        <div class="margin-top40px">
+            <div class="row paddinglr5px">
+                                <div class="col-md-3 col-xs-6 paddinglr10px products_img">
+                    <a href="javascript:;" alt="MOTOMA team is installing">
+                        <div class="overflow-hidden">
+                            <img class="w-100" src="uploads/image/20220926/1664188480.jpg" alt="MOTOMA team is installing">
+                        </div>
+                        <h5 class="margin-top10px space1 text-center font-size14px color3">MOTOMA team is installing</h5>
+                    </a>
+                </div>
+                                <div class="col-md-3 col-xs-6 paddinglr10px products_img">
+                    <a href="javascript:;" alt="MOTOMA in Syria">
+                        <div class="overflow-hidden">
+                            <img class="w-100" src="uploads/image/20220926/1664195835.jpg" alt="MOTOMA in Syria">
+                        </div>
+                        <h5 class="margin-top10px space1 text-center font-size14px color3">MOTOMA in Syria</h5>
+                    </a>
+                </div>
+                                <div class="col-md-3 col-xs-6 paddinglr10px products_img">
+                    <a href="javascript:;" alt="MOTOMA in overseas">
+                        <div class="overflow-hidden">
+                            <img class="w-100" src="uploads/image/20221008/1665223449.jpg" alt="MOTOMA in overseas">
+                        </div>
+                        <h5 class="margin-top10px space1 text-center font-size14px color3">MOTOMA in overseas</h5>
+                    </a>
+                </div>
+                                <div class="col-md-3 col-xs-6 paddinglr10px products_img">
+                    <a href="javascript:;" alt="MOTOMA  in Pakistan">
+                        <div class="overflow-hidden">
+                            <img class="w-100" src="uploads/image/20220926/1664191794.jpg" alt="MOTOMA  in Pakistan">
+                        </div>
+                        <h5 class="margin-top10px space1 text-center font-size14px color3">MOTOMA  in Pakistan</h5>
+                    </a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<div class="paddingtb100px overflow-hidden">
+    <div class="container">
+        <div class="text-center position-relative aboutus_title wow fadeInUp"><h5><span>NEWS</span></h5></div>
+        <div class="margin-top10px text-center aboutus_text wow fadeInUp">Quality creates brand, Service enhances value.</div>
+        <div class="margin-top80px">
+            <div class="index_news">
+                <ul class="text-center index_news_ul">
+                                        <li class="newson" id="news37">
+                        <a href="news-37-1.html">Company News</a>
+                    </li>
+                                        <li class="" id="news38">
+                        <a href="news-38-1.html">Industry News</a>
+                    </li>
+                                        <li class="" id="news39">
+                        <a href="news-39-1.html">Media Dynamics</a>
+                    </li>
+                                    </ul>
+            </div>
+
+                        <div class="margin-top40px index_news_con" id="news37_div" style="">
+                <div class="row">
+                                                                            </div>
+            </div>
+                        <div class="margin-top40px index_news_con" id="news38_div" style="display:none;">
+                <div class="row">
+                                                            <div class="col-sm-4">
+                        <div class="position-relative index_news_re">
+                            <a href="newdetails-78.html" alt="What types of inverters are MOTOMA divided into?">
+                                <img class="w-100" src="" alt="What types of inverters are MOTOMA divided into?">
+                                <div class="position-absolute index_news_top">
+                                    <div class="font-size18px color2">
+                                        <b class="font-size24px color3">2022</b> 11-11                                    </div>
+                                    <h3 class="margin-top20px space1 font-size18px color3">What types of inverters are MOTOMA divided into?</h3>
+                                    <h4 class="margin-top20px font-size14px color2"></h4>
+                                </div>
+                                <div class="position-relative font-size14px color3 index_news_details">Details</div>
+                            </a>
+                        </div>  
+                    </div>
+                                        <div class="col-sm-4">
+                        <div class="position-relative index_news_re">
+                            <a href="newdetails-35.html" alt="The world is so big, and every country is so powerful about energy storage">
+                                <img class="w-100" src="uploads/image/20220928/1664346480.jpg" alt="The world is so big, and every country is so powerful about energy storage">
+                                <div class="position-absolute index_news_top">
+                                    <div class="font-size18px color2">
+                                        <b class="font-size24px color3">2022</b> 09-22                                    </div>
+                                    <h3 class="margin-top20px space1 font-size18px color3">The world is so big, and every country is so powerful about energy storage</h3>
+                                    <h4 class="margin-top20px font-size14px color2">Through combing the industrial policies and scientific research support for energy storage technology in developed countries such as the United States, Japan and South Korea in recent years, it is found that most of these countries choose 2-3 energy storage technologies as the main research and development objects.US: The first country to promote energy storage demonstration project...</h4>
+                                </div>
+                                <div class="position-relative font-size14px color3 index_news_details">Details</div>
+                            </a>
+                        </div>  
+                    </div>
+                                        <div class="col-sm-4">
+                        <div class="position-relative index_news_re">
+                            <a href="newdetails-23.html" alt="The global energy storage market will expand rapidly by 2025">
+                                <img class="w-100" src="uploads/image/20220926/1664186562.jpg" alt="The global energy storage market will expand rapidly by 2025">
+                                <div class="position-absolute index_news_top">
+                                    <div class="font-size18px color2">
+                                        <b class="font-size24px color3">2022</b> 09-15                                    </div>
+                                    <h3 class="margin-top20px space1 font-size18px color3">The global energy storage market will expand rapidly by 2025</h3>
+                                    <h4 class="margin-top20px font-size14px color2">Global wind and solar installed capacity has grown steadily in recent years, and the energy storage market is expected to follow. Lithium iron phosphate (LFP) battery storage technology has significant advantages over other technologies and is becoming a major installed new energy storage capacity worldwide, according to Taiwan analyst TrendForce.This is in line with an earlie...</h4>
+                                </div>
+                                <div class="position-relative font-size14px color3 index_news_details">Details</div>
+                            </a>
+                        </div>  
+                    </div>
+                                                        </div>
+            </div>
+                        <div class="margin-top40px index_news_con" id="news39_div" style="display:none;">
+                <div class="row">
+                                                                            </div>
+            </div>
+             
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container clearfix">
+        <div class="float-left footer_left">
+            <ul class="footer_left_1">
+                <li class="footer_title">CONTACT US</li>
+                <li>Address: 321 3/F, Building A,5th Zone, Honghualing Industrial Zone, Taoyuan  Road, Nanshan, Shenzhen, Guangdong, China</li>
+                <li>Tel: +86-755-8373-6206</li>
+                <li>E-mial:  info@motoma.cn</li>
+            </ul>
+        </div>
+        <div class="float-right footer_right">
+            <form action="sendmail.php" method="post">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input class="inputbox" type="text" name="name" required="" oninvalid="setCustomValidity('Not null.');" oninput="setCustomValidity('');" placeholder="Name *" />
+                    </div>
+                    <div class="col-sm-6">
+                        <input class="inputbox" type="text" name="email" required="" oninvalid="setCustomValidity('Not null.');" oninput="setCustomValidity('');" placeholder="E-mial *"/>
+                    </div>
+                    <div class="col-sm-12">
+                        <textarea class="textareabox" name="message" required="" oninvalid="setCustomValidity('Not null.');" oninput="setCustomValidity('');" placeholder="Message *"></textarea>
+                    </div>
+                    <div class="col-sm-12"><button class="btnbox">SEND</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <div class="container text-center">
+        © MOTOMA POWER CO.,LTD All Rights Reserved<a target="_blank" href="https://beian.miit.gov.cn/"></a>
+    </div>
+</div>
+<div class="return"><span class="back_return"><a href="javascript:;"><img width="36" src="images/return.png"></a></span></div>
+<div class="return"><span class="back_return"><a href="javascript:;"><img width="36" src="images/return.png"></a></span></div>
+<div class="share">
+    <a class="facebook" href="http://www.facebook.com" target="_blank" title="Facebook"></a>
+    <a class="linkedin" href="http://www.linkedin.com" target="_blank" title="Linkedin"></a>
+    <a class="youtube" href="https://www.youtube.com" target="_blank" title="Youtube"></a>
+    <a class="instagram" href="https://instagram.com" target="_blank" title="Instagram"></a>
+</div>
+<div class="fixed-form">
+    <span class="close-form" id="close-form"></span>
+    <ul class="colorfullist">
+        <li><a class="whatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=18718862573" title="https://api.whatsapp.com/send?phone=8618565415160">Whatsapp</a></li>
+        <li><a class="email" href="mailto:inbox@terli.cn" title="mailto:info@motoma.cn">Email</a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/jquery.num.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script>
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        new WOW().init();
+    };
+
+    TouchSlide({
+        slideCell:"#slideBox",
+        titCell:".hd ul",
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        autoPage:true,
+        autoPlay:true
+    });
+
+    $('.timer').countUp();
+    
+    jQuery(".Scroll-left").slide({
+        titCell: ".left-hd ul",
+        mainCell: ".left-bd ul",
+        autoPage: true,
+        effect: "left",
+        // autoPlay: true,
+        vis: 1
+    });
+
+    $(function(){
+        $('.index_news ul li').hover(function(){
+            var id = $(this).attr('id');
+            $('.index_news ul li').removeClass('newson');
+            $(this).addClass('newson');
+            $('.index_news_con').hide();
+            $('#'+id+'_div').show();
+        })  
+    })
+</script>
+</body>
+</html>
