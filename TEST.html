@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAWAFED TRADING & ALTERNATIVE ENERGY</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://placehold.co/32x32/2F3FA4/FFFFFF?text=R">
+    <link rel="icon" type="image/x-icon" href="images/rawafed.ico">
 
     <style>
         /* Custom Styles */
@@ -71,16 +67,6 @@
             }
         }
 
-        /* Scrollbar styles for product gallery */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
         /* Modal styles */
         .modal {
             transition: opacity 0.25s ease;
@@ -94,42 +80,45 @@
         .modal-content {
             transition: transform 0.25s ease;
         }
+
+        .tab-active {
+            border-color: #f87a05 !important;
+            color: #f87a05 !important;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Preloader -->
     <div id="preloader">
         <div class="spinner"></div>
     </div>
 
-    <!-- Header & Navbar -->
     <header id="navbar" class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="https://placehold.co/80x80/2F3FA4/FFFFFF?text=Rawafed" alt="Rawafed Logo" class="h-12 w-12">
-                <div class="font-bold text-lg md:text-xl text-blue-900">
+                <img src="images/NEW LOGO RAWAFED.webp" alt="Rawafed Logo" class="h-14 w-14">
+                <div class="font-bold text-lg md:text-xl text-[#2f3fa4]">
                     <span data-lang="en">RAWAFED</span>
                     <span data-lang="ar" class="lang-ar">روافد</span>
                 </div>
             </div>
             <div class="hidden md:flex items-center space-x-6 text-gray-700 font-medium">
-                <a href="#home" class="hover:text-orange-500 transition-colors" data-lang="en">Home</a>
-                <a href="#about" class="hover:text-orange-500 transition-colors" data-lang="en">About</a>
-                <a href="#projects" class="hover:text-orange-500 transition-colors" data-lang="en">Projects</a>
-                <a href="#products" class="hover:text-orange-500 transition-colors" data-lang="en">Products</a>
-                <a href="#contact" class="hover:text-orange-500 transition-colors" data-lang="en">Contact</a>
+                <a href="#home" class="hover:text-[#f87a05] transition-colors" data-lang="en">Home</a>
+                <a href="#about" class="hover:text-[#f87a05] transition-colors" data-lang="en">About</a>
+                <a href="#projects" class="hover:text-[#f87a05] transition-colors" data-lang="en">Projects</a>
+                <a href="#products" class="hover:text-[#f87a05] transition-colors" data-lang="en">Products</a>
+                <a href="#contact" class="hover:text-[#f87a05] transition-colors" data-lang="en">Contact</a>
 
-                <a href="#home" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">الرئيسية</a>
-                <a href="#about" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">عن الشركة</a>
-                <a href="#projects" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">مشاريعنا</a>
-                <a href="#products" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">منتجاتنا</a>
-                <a href="#contact" class="hover:text-orange-500 transition-colors lang-ar" data-lang="ar">تواصل معنا</a>
+                <a href="#home" class="hover:text-[#f87a05] transition-colors lang-ar" data-lang="ar">الرئيسية</a>
+                <a href="#about" class="hover:text-[#f87a05] transition-colors lang-ar" data-lang="ar">عن الشركة</a>
+                <a href="#projects" class="hover:text-[#f87a05] transition-colors lang-ar" data-lang="ar">مشاريعنا</a>
+                <a href="#products" class="hover:text-[#f87a05] transition-colors lang-ar" data-lang="ar">منتجاتنا</a>
+                <a href="#contact" class="hover:text-[#f87a05] transition-colors lang-ar" data-lang="ar">تواصل معنا</a>
             </div>
             <div class="flex items-center">
                 <button id="lang-switcher"
-                    class="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-orange-500 transition-colors font-semibold">
+                    class="bg-[#2f3fa4] text-white px-4 py-2 rounded-md hover:bg-[#f87a05] transition-colors font-semibold">
                     <span class="lang-ar">English</span>
                     <span>العربية</span>
                 </button>
@@ -138,50 +127,46 @@
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Home</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">About</a>
-            <a href="#projects" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Projects</a>
-            <a href="#products" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Products</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-orange-500" data-lang="en">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">About</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Projects</a>
+            <a href="#products" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Products</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Contact</a>
 
-            <a href="#home" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar" data-lang="ar">الرئيسية</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar" data-lang="ar">عن الشركة</a>
-            <a href="#projects" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar"
+            <a href="#home" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar" data-lang="ar">الرئيسية</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar" data-lang="ar">عن الشركة</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar"
                 data-lang="ar">مشاريعنا</a>
-            <a href="#products" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar"
+            <a href="#products" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar"
                 data-lang="ar">منتجاتنا</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-orange-500 lang-ar" data-lang="ar">تواصل
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar" data-lang="ar">تواصل
                 معنا</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="relative h-[60vh] bg-cover bg-center"
-            style="background-image: url('https://placehold.co/1920x1080/cccccc/333333?text=Solar+Panel+Array');">
+        <section id="home" class="relative h-[70vh] bg-cover bg-center"
+            style="background-image: url('data1/images/img_7691.jpg');">
             <div class="absolute inset-0 bg-black/50"></div>
             <div
                 class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
                 <h1 class="text-3xl md:text-5xl font-bold leading-tight" data-lang="en">RAWAFED TRADING & ALTERNATIVE
                     ENERGY</h1>
                 <h1 class="text-3xl md:text-5xl font-bold leading-tight lang-ar" data-lang="ar">روافد للتجارة والطاقة
-                    البديلة</h1>
+                    البديلة م.م.خ</h1>
                 <p class="mt-4 text-lg md:text-2xl" data-lang="en">Together For Sustainable Power</p>
                 <p class="mt-4 text-lg md:text-2xl lang-ar" data-lang="ar">معاً من أجل طاقة مستدامة</p>
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">About Our Company</h2>
                 <h2 class="text-3xl font-bold text-center mb-12 lang-ar" data-lang="ar">عن شركتنا</h2>
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/2F3FA4/FFFFFF?text=Rawafed+Project" alt="About Rawafed"
-                            class="rounded-lg shadow-xl w-full">
+                        <img src="images/RAWAFED_AL_OULA.webp" alt="About Rawafed" class="rounded-lg shadow-xl w-full">
                     </div>
                     <div class="md:w-1/2">
                         <p class="text-gray-600 leading-relaxed" data-lang="en"></p>
@@ -191,18 +176,15 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Our Projects</h2>
                 <h2 class="text-3xl font-bold text-center mb-12 lang-ar" data-lang="ar">مشاريعنا</h2>
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project cards will be injected here by JavaScript -->
                 </div>
             </div>
         </section>
 
-        <!-- Products Section -->
         <section id="products" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-4" data-lang="en">Our Products</h2>
@@ -212,40 +194,38 @@
                 <p class="text-center text-gray-600 mb-12 lang-ar" data-lang="ar">وكلاء شركة موتوما الحصريون في
                     السويداء.</p>
 
-                <!-- Product Tabs -->
                 <div class="mb-8 flex justify-center border-b border-gray-200">
                     <button data-tab="panels"
-                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-blue-800 border-b-2 border-blue-800"
+                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-[#2f3fa4] border-b-2 border-[#2f3fa4]"
                         data-lang="en">Panels</button>
                     <button data-tab="inverters"
-                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-[#f87a05]"
                         data-lang="en">Inverters</button>
                     <button data-tab="batteries"
-                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-[#f87a05]"
                         data-lang="en">Batteries</button>
 
                     <button data-tab="panels"
-                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-blue-800 border-b-2 border-blue-800 lang-ar"
+                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-[#2f3fa4] border-b-2 border-[#2f3fa4] lang-ar"
                         data-lang="ar">الألواح</button>
                     <button data-tab="inverters"
-                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800 lang-ar"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-[#f87a05] lang-ar"
                         data-lang="ar">الإنفيرترات</button>
                     <button data-tab="batteries"
-                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-blue-800 lang-ar"
+                        class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-[#f87a05] lang-ar"
                         data-lang="ar">البطاريات</button>
                 </div>
 
-                <!-- Product Content -->
-                <div id="panels-content" class="product-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div id="panels-content" class="product-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 </div>
                 <div id="inverters-content"
-                    class="product-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                    class="product-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                </div>
                 <div id="batteries-content"
-                    class="product-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                    class="product-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-gray-800 text-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Contact Us</h2>
@@ -254,39 +234,39 @@
                     <div class="md:w-1/2">
                         <div class="space-y-4">
                             <div class="flex items-center gap-4">
-                                <i class="fas fa-map-marker-alt text-orange-400 text-xl w-6 text-center"></i>
+                                <i class="fas fa-map-marker-alt text-[#f87a05] text-xl w-6 text-center"></i>
                                 <span data-lang="en">Syria - Sweida - Al Raha</span>
                                 <span class="lang-ar" data-lang="ar">سوريا - السويداء - الرحا</span>
                             </div>
                             <div class="flex items-center gap-4">
-                                <i class="fas fa-envelope text-orange-400 text-xl w-6 text-center"></i>
+                                <i class="fas fa-envelope text-[#f87a05] text-xl w-6 text-center"></i>
                                 <a href="mailto:info@rawafed-sweida.com"
-                                    class="hover:text-orange-400">info@rawafed-sweida.com</a>
+                                    class="hover:text-[#f87a05]">info@rawafed-sweida.com</a>
                             </div>
                             <div class="flex items-center gap-4">
-                                <i class="fas fa-phone text-orange-400 text-xl w-6 text-center"></i>
-                                <a href="tel:00963982470204" class="hover:text-orange-400">00963-982470204</a>
+                                <i class="fas fa-phone text-[#f87a05] text-xl w-6 text-center"></i>
+                                <a href="tel:00963982470204" class="hover:text-[#f87a05]">00963-982470204</a>
                             </div>
                             <div class="flex items-center gap-4">
-                                <i class="fas fa-tty text-orange-400 text-xl w-6 text-center"></i>
-                                <span class="hover:text-orange-400">016-395544</span>
+                                <i class="fas fa-tty text-[#f87a05] text-xl w-6 text-center"></i>
+                                <span class="hover:text-[#f87a05]">016-395544</span>
                             </div>
                         </div>
                         <div class="mt-8 flex space-x-6">
-                            <a href="https://youtube.com/@rawafed-energy" target="_blank"
-                                class="text-2xl hover:text-orange-400 transition-colors"><i
+                            <a href="https://www.youtube.com/@rawafedco-trading-alternat80" target="_blank"
+                                class="text-2xl hover:text-[#f87a05] transition-colors"><i
                                     class="fab fa-youtube"></i></a>
                             <a href="https://www.facebook.com/Marwanaburas59?mibextid=ZbWKwL" target="_blank"
-                                class="text-2xl hover:text-orange-400 transition-colors"><i
+                                class="text-2xl hover:text-[#f87a05] transition-colors"><i
                                     class="fab fa-facebook"></i></a>
                             <a href="https://api.whatsapp.com/send?phone=963944911892" target="_blank"
-                                class="text-2xl hover:text-orange-400 transition-colors"><i
+                                class="text-2xl hover:text-[#f87a05] transition-colors"><i
                                     class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="md:w-1/2">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.892742137681!2d36.65083331518874!3d32.90158338089858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDU0JzA1LjciTiAzNsKwMzgnNTQuMCJF!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.101719293427!2d36.63469107471958!3d32.92210177755866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1539174304858b79%3A0x6b9075a31b0df841!2z2YXYt9i52YUg2YPYp9mFINmE2YTZhdmG2KfYqSDYp9mE2LTYsdmD2Kkg2KfZhNi32KjZitmC2YrYqQ!5e0!3m2!1sen!2s!4v1717876899736!5m2!1sen!2s"
                             width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-lg"></iframe>
                     </div>
@@ -295,36 +275,32 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-8">
         <div class="container mx-auto px-6 text-center">
             <p data-lang="en">Administrative Manager: Marwan Fadel Abu Ras</p>
             <p class="lang-ar" data-lang="ar">المدير الإداري: مروان فضل أبو راس</p>
-            <p class="mt-2 text-sm">&copy; <span id="year"></span> RAWAFED. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">© <span id="year"></span> RAWAFED. All Rights Reserved.</p>
             <p class="mt-1 text-xs" data-lang="en">Designed by Eng. Qusai Hamael</p>
             <p class="mt-1 text-xs lang-ar" data-lang="ar">تصميم: م. قصي حمائل</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="to-top-button" title="Go To Top"
-        class="hidden fixed bottom-8 right-8 z-50 p-3 rounded-full bg-blue-800 text-white shadow-lg hover:bg-orange-500 focus:outline-none transition-all duration-300">
+        class="hidden fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[#2f3fa4] text-white shadow-lg hover:bg-[#f87a05] focus:outline-none transition-all duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Project Modal -->
     <div id="project-modal"
         class="modal fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
         <div
-            class="modal-content bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-full overflow-y-auto transform scale-95">
+            class="modal-content bg-white rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] transform scale-95 flex flex-col">
             <div class="flex justify-between items-center p-4 border-b">
                 <h3 id="modal-title" class="text-2xl font-bold"></h3>
                 <button id="modal-close" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
             </div>
-            <div class="p-6">
+            <div class="p-6 overflow-y-auto">
                 <div id="modal-video-container" class="mb-4 hidden"></div>
-                <div id="modal-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <!-- Gallery images will be injected here -->
+                <div id="modal-gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 </div>
             </div>
         </div>
