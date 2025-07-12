@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAWAFED TRADING & ALTERNATIVE ENERGY</title>
 
+    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/rawafed.ico">
 
     <style>
@@ -30,7 +34,7 @@
             font-family: 'Cairo', sans-serif;
         }
 
-        /* Hide elements by default */
+        /* Hide elements by default, to be shown by JS */
         [data-lang="ar"],
         [data-lang="en"] {
             display: none;
@@ -72,15 +76,15 @@
             transition: opacity 0.25s ease;
         }
 
-        .modal-active {
-            overflow-x: hidden;
-            overflow-y: auto;
+        body.modal-active {
+            overflow: hidden;
         }
 
         .modal-content {
             transition: transform 0.25s ease;
         }
 
+        /* Active tab style */
         .tab-active {
             border-color: #f87a05 !important;
             color: #f87a05 !important;
@@ -90,14 +94,16 @@
 
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Preloader -->
     <div id="preloader">
         <div class="spinner"></div>
     </div>
 
+    <!-- Header and Navigation Bar -->
     <header id="navbar" class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="images/NEW LOGO RAWAFED.webp" alt="Rawafed Logo" class="h-14 w-14">
+                <img src="images/NEW LOGO RAWAFED.webp" alt="Rawafed Logo" class="h-14 w-auto">
                 <div class="font-bold text-lg md:text-xl text-[#2f3fa4]">
                     <span data-lang="en">RAWAFED</span>
                     <span data-lang="ar" class="lang-ar">روافد</span>
@@ -127,25 +133,14 @@
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white shadow-lg">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Home</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">About</a>
-            <a href="#projects" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Projects</a>
-            <a href="#products" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Products</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-[#f87a05]" data-lang="en">Contact</a>
-
-            <a href="#home" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar" data-lang="ar">الرئيسية</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar" data-lang="ar">عن الشركة</a>
-            <a href="#projects" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar"
-                data-lang="ar">مشاريعنا</a>
-            <a href="#products" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar"
-                data-lang="ar">منتجاتنا</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-[#f87a05] lang-ar" data-lang="ar">تواصل
-                معنا</a>
+            <!-- Mobile links will be populated by JS -->
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="relative h-[70vh] bg-cover bg-center"
             style="background-image: url('data1/images/img_7691.jpg');">
             <div class="absolute inset-0 bg-black/50"></div>
@@ -160,6 +155,7 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">About Our Company</h2>
@@ -176,15 +172,18 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Our Projects</h2>
                 <h2 class="text-3xl font-bold text-center mb-12 lang-ar" data-lang="ar">مشاريعنا</h2>
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project cards will be injected here by JavaScript -->
                 </div>
             </div>
         </section>
 
+        <!-- Products Section -->
         <section id="products" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-4" data-lang="en">Our Products</h2>
@@ -196,7 +195,7 @@
 
                 <div class="mb-8 flex justify-center border-b border-gray-200">
                     <button data-tab="panels"
-                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-[#2f3fa4] border-b-2 border-[#2f3fa4]"
+                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-gray-500 border-b-2"
                         data-lang="en">Panels</button>
                     <button data-tab="inverters"
                         class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-[#f87a05]"
@@ -206,7 +205,7 @@
                         data-lang="en">Batteries</button>
 
                     <button data-tab="panels"
-                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-[#2f3fa4] border-b-2 border-[#2f3fa4] lang-ar"
+                        class="product-tab tab-active px-6 py-3 font-medium text-lg text-gray-500 border-b-2 lang-ar"
                         data-lang="ar">الألواح</button>
                     <button data-tab="inverters"
                         class="product-tab px-6 py-3 font-medium text-lg text-gray-500 hover:text-[#f87a05] lang-ar"
@@ -226,6 +225,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-gray-800 text-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Contact Us</h2>
@@ -275,6 +275,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-8">
         <div class="container mx-auto px-6 text-center">
             <p data-lang="en">Administrative Manager: Marwan Fadel Abu Ras</p>
@@ -285,13 +286,15 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
     <button id="to-top-button" title="Go To Top"
         class="hidden fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[#2f3fa4] text-white shadow-lg hover:bg-[#f87a05] focus:outline-none transition-all duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Project Modal -->
     <div id="project-modal"
-        class="modal fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
+        class="modal fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4 opacity-0">
         <div
             class="modal-content bg-white rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] transform scale-95 flex flex-col">
             <div class="flex justify-between items-center p-4 border-b">
@@ -320,73 +323,75 @@
 
         const projectsData = [
             {
+                id: 'rawafed-al-oula',
+                name: { en: 'RAWAFED AL OULA STATION', ar: 'محطة روافد الأولى' },
+                img: 'data1/images/img_7691.jpg',
+                details: {
+                    en: '100kw.h photovoltaic station owned by Rawafed Company in Sweida - Al-Raha - Masad Road.',
+                    ar: 'محطة كهروضوئية 100kw.h. تملكها شركة روافد في السويداء - الرحا - طريق مصاد.'
+                },
+                video: 'https://www.youtube.com/embed/wtvYbuHSb3s?rel=0',
+                gallery: ['images/rawafed/1.webp', 'images/rawafed/2.webp', 'images/rawafed/3.webp', 'images/rawafed/4.webp', 'images/rawafed/5.webp', 'images/rawafed/6.webp', 'images/rawafed/7.webp', 'images/rawafed/8.webp', 'images/rawafed/9.webp', 'images/rawafed/11.webp', 'images/rawafed/12.webp', 'images/rawafed/13.webp', 'images/rawafed/14.webp', 'images/rawafed/16.webp', 'images/rawafed/17.webp', 'images/rawafed/18.webp', 'images/rawafed/20.webp', 'images/rawafed/21.webp', 'images/rawafed/22.webp', 'images/rawafed/23.webp', 'images/rawafed/24.webp', 'images/rawafed/25.webp', 'images/rawafed/26.webp', 'images/rawafed/27.webp', 'images/rawafed/A.webp', 'images/rawafed/B.webp', 'images/rawafed/C.webp', 'images/rawafed/D.webp', 'images/rawafed/E.webp', 'images/rawafed/F.webp']
+            },
+            {
                 id: 'al-ayham',
                 name: { en: 'AL AYHAM STATION', ar: 'محطة الأيهم' },
-                img: 'https://placehold.co/400x300/2F3FA4/FFFFFF?text=Al+Ayham',
+                img: 'data1/images/41.png',
                 details: {
-                    en: '100kw.h photovoltaic station owned by Yahya Al-Andari in Sweida - Baka Triangle.',
+                    en: '100kw.h photovoltaic station owned by Yahya Al-Andari and his sons in Sweida - Baka Triangle.',
                     ar: 'محطة كهروضوئية 100kw.h. يملكها يحيى العنداري وأولاده في السويداء-مثلث بكا.'
                 },
                 video: 'https://www.youtube.com/embed/W51fLY2Fpr4?rel=0',
-                gallery: Array.from({ length: 46 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Al+Ayham+${i + 1}`)
+                gallery: ['images/AL AYHAM/1.webp', 'images/AL AYHAM/2.webp', 'images/AL AYHAM/3.webp', 'images/AL AYHAM/4.webp', 'images/AL AYHAM/5.webp', 'images/AL AYHAM/6.webp', 'images/AL AYHAM/7.webp', 'images/AL AYHAM/8.webp', 'images/AL AYHAM/9.webp', 'images/AL AYHAM/10.webp', 'images/AL AYHAM/11.webp', 'images/AL AYHAM/12.webp', 'images/AL AYHAM/13.webp', 'images/AL AYHAM/14.webp', 'images/AL AYHAM/15.webp', 'images/AL AYHAM/16.webp', 'images/AL AYHAM/17.webp', 'images/AL AYHAM/18.webp', 'images/AL AYHAM/19.webp', 'images/AL AYHAM/20.webp', 'images/AL AYHAM/21.webp', 'images/AL AYHAM/22.webp', 'images/AL AYHAM/23.webp', 'images/AL AYHAM/24.webp', 'images/AL AYHAM/25.webp', 'images/AL AYHAM/26.webp', 'images/AL AYHAM/27.webp', 'images/AL AYHAM/28.webp', 'images/AL AYHAM/29.webp', 'images/AL AYHAM/30.webp', 'images/AL AYHAM/31.webp', 'images/AL AYHAM/32.webp', 'images/AL AYHAM/33.webp', 'images/AL AYHAM/34.webp', 'images/AL AYHAM/35.webp', 'images/AL AYHAM/36.webp', 'images/AL AYHAM/37.webp', 'images/AL AYHAM/38.webp', 'images/AL AYHAM/39.webp', 'images/AL AYHAM/40.webp', 'images/AL AYHAM/41.webp', 'images/AL AYHAM/42.webp', 'images/AL AYHAM/43.webp', 'images/AL AYHAM/44.webp', 'images/AL AYHAM/45.webp', 'images/AL AYHAM/46.webp']
             },
             {
                 id: 'khalkhala',
                 name: { en: 'KHALKHALA STATION', ar: 'محطة خلخلة' },
-                img: 'https://placehold.co/400x300/F87A05/FFFFFF?text=Khalkhala',
+                img: 'data1/images/img_4324.jpg',
                 details: {
                     en: '100kw.h photovoltaic station owned by Basil Hilal in Sweida - Khalkhala.',
                     ar: 'محطة كهروضوئية 100kw.h. يملكها باسل هلال في السويداء - خلخلة.'
                 },
-                gallery: Array.from({ length: 12 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Khalkhala+${i + 1}`)
-            },
-            {
-                id: 'rawafed-al-oula',
-                name: { en: 'RAWAFED AL OULA STATION', ar: 'محطة روافد الأولى' },
-                img: 'https://placehold.co/400x300/28A745/FFFFFF?text=Rawafed+Al+Oula',
-                details: {
-                    en: 'One of our flagship projects demonstrating our commitment to sustainable energy.',
-                    ar: 'أحد مشاريعنا الرائدة التي تظهر التزامنا بالطاقة المستدامة.'
-                },
-                gallery: Array.from({ length: 8 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Rawafed+Al+Oula+${i + 1}`)
+                video: '',
+                gallery: ['images/KHALKHALA/1.JPG', 'images/KHALKHALA/2.PNG', 'images/KHALKHALA/3.PNG', 'images/KHALKHALA/4.PNG', 'images/KHALKHALA/5.JPG', 'images/KHALKHALA/6.JPG', 'images/KHALKHALA/7.JPG', 'images/KHALKHALA/8.JPG', 'images/KHALKHALA/9.JPG', 'images/KHALKHALA/11.JPG', 'images/KHALKHALA/12.JPG']
             },
             {
                 id: 'off-grid',
                 name: { en: 'OFF GRID SYSTEMS', ar: 'أنظمة خارج الشبكة' },
-                img: 'https://placehold.co/400x300/17A2B8/FFFFFF?text=Off-Grid',
+                img: 'data1/images/img_e8968.jpg',
                 details: {
                     en: 'Customized off-grid solutions for residential and commercial needs.',
                     ar: 'حلول مخصصة خارج الشبكة للاحتياجات السكنية والتجارية.'
                 },
-                gallery: Array.from({ length: 6 }, (_, i) => `https://placehold.co/300x200/cccccc/333333?text=Off-Grid+${i + 1}`)
+                video: '',
+                gallery: []
             }
         ];
 
         const productsData = {
             panels: [
-                { name: 'SO-SPN-MC182-525-545', img: 'https://placehold.co/300x300/cccccc/333333?text=Panel+545W', pdf: 'pdfs/SO-SPN-MC182-525-545.pdf' },
-                { name: 'DSE-SO-SPN-MC156-405', img: 'https://placehold.co/300x300/cccccc/333333?text=Panel+405W', pdf: 'pdfs/DSE-SO-SPN-MC156-405.pdf' },
+                { name: 'SO-SPN-MC182-525-545', img: 'pdfs/SO-SPN-MC182-525-545.webp', pdf: 'pdfs/SO-SPN-MC182-525-545.pdf' },
+                { name: 'DSE-SO-SPN-MC156-405', img: 'pdfs/SO-SPN-MC166-435-455.webp', pdf: 'pdfs/DSE-SO-SPN-MC156-405.pdf' },
             ],
             inverters: [
-                { name: 'VM 1.5KVA', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+1.5KVA', pdf: 'pdfs/MOTOMA-Axpert VM 1.5KVA.pdf' },
-                { name: 'VM 3KVA value', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+3KVA', pdf: 'pdfs/VM 3KVA value.pdf' },
-                { name: 'VM III TWIN 4 & 6 KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+VMIII', pdf: 'pdfs/VM III TWIN 4-6KW.pdf' },
-                { name: 'VM IV TWIN 4 & 6 KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+VMIV', pdf: 'pdfs/VM IV TWIN 4-6 KW.pdf' },
-                { name: 'MAX TWIN 8KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+MAX+8KW', pdf: 'pdfs/MAX TWIN 8KW.pdf' },
-                { name: 'MAX II TWIN 8KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+MAXII+8KW', pdf: 'pdfs/MAX II TWIN 8KW.pdf' },
-                { name: 'MAX II TWIN 11KW', img: 'https://placehold.co/300x300/cccccc/333333?text=Inverter+MAXII+11KW', pdf: 'pdfs/MAX II TWIN 11KW.pdf' },
+                { name: 'VM 1.5KVA', img: 'pdfs/VM 3KVA value.webp', pdf: 'pdfs/MOTOMA-Axpert VM 1.5KVA.pdf' },
+                { name: 'VM 3KVA value', img: 'pdfs/VM 3KVA value.webp', pdf: 'pdfs/VM 3KVA value.pdf' },
+                { name: 'VM III TWIN 4 & 6 KW', img: 'pdfs/VM III TWIN 4KW.webp', pdf: 'pdfs/VM III TWIN 4-6KW.pdf' },
+                { name: 'VM IV TWIN 4 & 6 KW', img: 'pdfs/VM IV TWIN 4KW.webp', pdf: 'pdfs/VM IV TWIN 4-6 KW.pdf' },
+                { name: 'MAX TWIN 8KW', img: 'pdfs/MAX TWIN 8KW.webp', pdf: 'pdfs/MAX TWIN 8KW.pdf' },
+                { name: 'MAX II TWIN 8KW', img: 'pdfs/MAX II TWIN 8KW.webp', pdf: 'pdfs/MAX II TWIN 8KW.pdf' },
+                { name: 'MAX II TWIN 11KW', img: 'pdfs/MAX II TWIN 8KW.webp', pdf: 'pdfs/MAX II TWIN 11KW.pdf' },
             ],
             batteries: [
-                { name: 'M62PW - M68PW', img: 'https://placehold.co/300x300/cccccc/333333?text=Battery+M68PW', pdf: 'pdfs/M62PW -M68PW.pdf' },
-                { name: 'M82PW - M88PW', img: 'https://placehold.co/300x300/cccccc/333333?text=Battery+M88PW', pdf: 'pdfs/M82PW -M88PW.pdf' },
-                { name: 'GEL BATTERIES', img: 'https://placehold.co/300x300/cccccc/333333?text=GEL+Battery', pdf: 'pdfs/Motoma Gel Battery.pdf' },
+                { name: 'M62PW - M68PW', img: 'pdfs/M62PW -M68PW.webp', pdf: 'pdfs/M62PW -M68PW.pdf' },
+                { name: 'M82PW - M88PW', img: 'pdfs/M82PW _M88PW.webp', pdf: 'pdfs/M82PW -M88PW.pdf' },
+                { name: 'GEL BATTERIES', img: 'pdfs/12.8V 200Ah.webp', pdf: 'pdfs/Motoma Gel Battery.pdf' },
             ]
         };
 
         // --- SCRIPT LOGIC ---
         document.addEventListener('DOMContentLoaded', () => {
 
-            // --- GENERAL SETUP ---
             const preloader = document.getElementById('preloader');
             window.addEventListener('load', () => {
                 preloader.style.opacity = '0';
@@ -394,7 +399,6 @@
             });
             document.getElementById('year').textContent = new Date().getFullYear();
 
-            // --- LANGUAGE SWITCHER ---
             const langSwitcher = document.getElementById('lang-switcher');
             const htmlEl = document.documentElement;
             let currentLang = 'en';
@@ -404,16 +408,10 @@
                 htmlEl.lang = lang;
                 htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-                // Toggle visibility of language-specific elements
                 document.querySelectorAll('[data-lang]').forEach(el => {
-                    if (el.dataset.lang === lang) {
-                        el.style.display = 'block';
-                    } else {
-                        el.style.display = 'none';
-                    }
+                    el.style.display = el.dataset.lang === lang ? 'block' : 'none';
                 });
 
-                // Update button text
                 const buttonTextEn = langSwitcher.querySelector('span:not(.lang-ar)');
                 const buttonTextAr = langSwitcher.querySelector('span.lang-ar');
                 if (lang === 'ar') {
@@ -424,13 +422,15 @@
                     buttonTextAr.style.display = 'block';
                 }
 
-                // Update text content from JS object
-                document.querySelector('[data-lang="en"][class*="about"]').innerHTML = textContent.en.about;
-                document.querySelector('[data-lang="ar"][class*="about"]').innerHTML = textContent.ar.about;
+                document.querySelector('p[data-lang="en"].leading-relaxed').innerHTML = textContent.en.about;
+                document.querySelector('p[data-lang="ar"].leading-relaxed').innerHTML = textContent.ar.about;
 
-                // Re-render dynamic content
                 renderProjects();
                 renderProducts();
+
+                const activeTab = document.querySelector('.product-tab.tab-active')?.dataset.tab || 'panels';
+                document.querySelectorAll('.product-tab').forEach(t => t.classList.remove('tab-active'));
+                document.querySelectorAll(`.product-tab[data-tab="${activeTab}"]`).forEach(t => t.classList.add('tab-active'));
             };
 
             langSwitcher.addEventListener('click', () => {
@@ -438,18 +438,18 @@
                 updateLanguage(newLang);
             });
 
-            // --- MOBILE MENU ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.hidden.md\\:flex');
+            mobileMenu.innerHTML = navLinks.innerHTML;
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.classList.add('block', 'py-2');
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-            // Close mobile menu on link click
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-            });
 
-            // --- PROJECTS ---
             const projectsGrid = document.getElementById('projects-grid');
             const renderProjects = () => {
                 projectsGrid.innerHTML = '';
@@ -468,7 +468,6 @@
                 addProjectCardListeners();
             };
 
-            // --- PROJECT MODAL ---
             const modal = document.getElementById('project-modal');
             const modalTitle = document.getElementById('modal-title');
             const modalGallery = document.getElementById('modal-gallery');
@@ -478,62 +477,57 @@
             const openModal = (projectId) => {
                 const project = projectsData.find(p => p.id === projectId);
                 if (!project) return;
-
                 modalTitle.textContent = project.name[currentLang];
 
-                // Video
                 if (project.video) {
                     modalVideoContainer.innerHTML = `<iframe class="w-full aspect-video rounded-md" src="${project.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                     modalVideoContainer.classList.remove('hidden');
                 } else {
                     modalVideoContainer.classList.add('hidden');
+                    modalVideoContainer.innerHTML = '';
                 }
 
-                // Gallery
                 modalGallery.innerHTML = '';
                 project.gallery.forEach(imgSrc => {
-                    modalGallery.innerHTML += `<a href="${imgSrc}" target="_blank"><img src="${imgSrc}" class="w-full h-full object-cover rounded-md shadow-md hover:opacity-80 transition-opacity"></a>`;
+                    modalGallery.innerHTML += `<a href="${imgSrc}" target="_blank" rel="noopener noreferrer"><img src="${imgSrc}" class="w-full h-full object-cover rounded-md shadow-md hover:opacity-80 transition-opacity"></a>`;
                 });
 
                 modal.classList.remove('hidden');
                 document.body.classList.add('modal-active');
                 setTimeout(() => {
-                    modal.classList.remove('opacity-0');
+                    modal.classList.add('opacity-100');
                     modal.querySelector('.modal-content').classList.remove('scale-95');
                 }, 10);
             };
 
             const closeModal = () => {
-                modal.classList.add('opacity-0');
+                modal.classList.remove('opacity-100');
                 modal.querySelector('.modal-content').classList.add('scale-95');
                 setTimeout(() => {
                     modal.classList.add('hidden');
                     document.body.classList.remove('modal-active');
+                    modalVideoContainer.innerHTML = '';
                 }, 250);
             };
 
             modalClose.addEventListener('click', closeModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal();
-            });
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', (e) => { if (e.key === "Escape" && !modal.classList.contains('hidden')) closeModal(); });
 
             function addProjectCardListeners() {
                 document.querySelectorAll('.project-card').forEach(card => {
-                    card.addEventListener('click', () => {
-                        openModal(card.dataset.projectId);
-                    });
+                    card.addEventListener('click', () => openModal(card.dataset.projectId));
                 });
             }
 
-            // --- PRODUCTS ---
             const productTabs = document.querySelectorAll('.product-tab');
             const productContents = document.querySelectorAll('.product-content');
 
             const createProductCard = (product) => `
                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <img src="${product.img}" alt="${product.name}" class="w-full h-48 object-contain mb-4">
-                    <h4 class="font-semibold h-12">${product.name}</h4>
-                    <a href="${product.pdf}" target="_blank" class="mt-4 inline-block bg-blue-800 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-orange-500 transition-colors">
+                    <h4 class="font-semibold h-12 flex items-center justify-center">${product.name}</h4>
+                    <a href="${product.pdf}" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block bg-[#2f3fa4] text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-[#f87a05] transition-colors">
                         <span data-lang="en">Data Sheet</span>
                         <span data-lang="ar" class="lang-ar">ورقة البيانات</span>
                         <i class="fas fa-download ml-2"></i>
@@ -544,12 +538,13 @@
             const renderProducts = () => {
                 Object.keys(productsData).forEach(category => {
                     const container = document.getElementById(`${category}-content`);
-                    container.innerHTML = '';
-                    productsData[category].forEach(product => {
-                        container.innerHTML += createProductCard(product);
-                    });
+                    if (container) {
+                        container.innerHTML = '';
+                        productsData[category].forEach(product => {
+                            container.innerHTML += createProductCard(product);
+                        });
+                    }
                 });
-                // Re-apply language visibility after re-rendering
                 document.querySelectorAll('[data-lang]').forEach(el => {
                     el.style.display = el.dataset.lang === currentLang ? 'block' : 'none';
                 });
@@ -557,31 +552,26 @@
 
             productTabs.forEach(tab => {
                 tab.addEventListener('click', () => {
-                    productTabs.forEach(t => t.classList.remove('tab-active', 'text-blue-800', 'border-blue-800'));
-                    document.querySelectorAll(`.product-tab[data-tab="${tab.dataset.tab}"]`).forEach(t => t.classList.add('tab-active', 'text-blue-800', 'border-blue-800'));
+                    const tabName = tab.dataset.tab;
+                    productTabs.forEach(t => t.classList.remove('tab-active'));
+                    document.querySelectorAll(`.product-tab[data-tab="${tabName}"]`).forEach(specificTab => specificTab.classList.add('tab-active'));
 
-                    productContents.forEach(content => {
-                        content.classList.add('hidden');
-                    });
-                    document.getElementById(`${tab.dataset.tab}-content`).classList.remove('hidden');
+                    productContents.forEach(content => content.classList.add('hidden'));
+                    const activeContent = document.getElementById(`${tabName}-content`);
+                    if (activeContent) activeContent.classList.remove('hidden');
                 });
             });
 
-            // --- BACK TO TOP BUTTON ---
             const toTopButton = document.getElementById('to-top-button');
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    toTopButton.classList.remove('hidden');
-                } else {
-                    toTopButton.classList.add('hidden');
-                }
+                if (window.scrollY > 300) toTopButton.classList.remove('hidden');
+                else toTopButton.classList.add('hidden');
             });
             toTopButton.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // --- INITIALIZE ---
-            updateLanguage('en'); // Set default language to English
+            updateLanguage('en');
         });
     </script>
 </body>
